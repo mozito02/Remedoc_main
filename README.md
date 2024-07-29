@@ -22,9 +22,9 @@ Remedoc is a revolutionary online all-in-one healthcare service with advanced AI
 
 ## Demo
 
-[![Remedoc Demo Video](https://youtu.be/BoVQg5786oQ)](https://youtu.be/BoVQg5786oQ)
+[![Remedoc Demo Video](https://youtu.be/BoVQg5786oQ)
 
-Click the image above to watch the demo video.
+Click the link to watch the demo video.
 
 ## Technologies Used
 
