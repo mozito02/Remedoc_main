@@ -1,4 +1,3 @@
-Here's a detailed README for your Remedoc project:
 
 ---
 
@@ -110,4 +109,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Feel free to customize this README further based on your specific needs and additional details of your project.
