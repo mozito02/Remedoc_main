@@ -1,4 +1,3 @@
-
 ---
 
 # Remedoc
@@ -8,6 +7,7 @@ Remedoc is a revolutionary online all-in-one healthcare service with advanced AI
 ## Table of Contents
 
 - [Features](#features)
+- [Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [Setup and Installation](#setup-and-installation)
 - [Environment Variables](#environment-variables)
@@ -20,6 +20,12 @@ Remedoc is a revolutionary online all-in-one healthcare service with advanced AI
 - **MedSign**: Utilizes Gemini LLM for medical sign interpretation and diagnostics.
 - **DocTalk**: Employs Langchain and Groq API, powered by LLM LLama 3 for doctor-patient interaction.
 - **SleepTrip**: Uses Gemini for sleep tracking and recommendations.
+
+## Demo
+
+[![Remedoc Demo Video](https://youtu.be/BoVQg5786oQ)](https://youtu.be/BoVQg5786oQ)
+
+Click the image above to watch the demo video.
 
 ## Technologies Used
 
@@ -108,4 +114,3 @@ We welcome contributions from the community. To contribute:
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
-
