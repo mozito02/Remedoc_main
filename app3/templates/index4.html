@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocTalk</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="././static/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="././static/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="././static/images/favicon_io/favicon-16x16.png">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        .fixed-panel {
+            min-height: 400px;
+            max-height: 400px;
+            background-color: #19313c;
+            color: white;
+            overflow: auto;
+        }
+
+        .media-list {
+            overflow: auto;
+            clear: both;
+            display: table;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            word-break: normal;
+            line-break: strict;
+        }
+
+        .panel {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 6px solid transparent;
+            border-radius: 25px;
+            -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+        }
+
+        .panel-info {
+            border-color: #0c2735;
+        }
+
+        .panel-info>.panel-heading {
+            color: white;
+            background-color: #0c2735;
+            border-color: #0c2735;
+        }
+
+        .panel-footer {
+            padding: 10px 15px;
+            background-color: #0c2735;
+            border-top: 1px solid #0c2735;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px
+        }
+
+        body {
+            background: rgb(96, 143, 149);
+            background: -moz-linear-gradient(-45deg, rgba(96, 143, 149, 1) 0%, rgba(0, 133, 136, 1) 9%, rgba(12, 36, 73, 1) 52%, rgba(26, 30, 59, 1) 100%);
+            background: -webkit-linear-gradient(-45deg, rgba(96, 143, 149, 1) 0%, rgba(0, 133, 136, 1) 9%, rgba(12, 36, 73, 1) 52%, rgba(26, 30, 59, 1) 100%);
+            background: linear-gradient(135deg, rgba(96, 143, 149, 1) 0%, rgba(0, 133, 136, 1) 9%, rgba(12, 36, 73, 1) 52%, rgba(26, 30, 59, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#608f95', endColorstr='#1a1e3b', GradientType=1);
+            height: 100vh;
+        }
+
+        .container {
+            height: 100%;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0c2735;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 30px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">DocTalk</a>
+        <a href="/" class="nav-link">Home</a>
+    </nav>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div id="chatPanel" class="panel panel-info">
+                    <div class="panel-heading">
+                        <strong><span class="glyphicon glyphicon-globe"></span> Welcome To DocTalk !!! (You: Green / Bot: White) </strong>
+                    </div>
+                    <div class="panel-body fixed-panel">
+                        <ul class="media-list">
+                            {% if user_message and bot_response %}
+                                <li class="media"><div class="media-body"><div class="media"><div style="text-align:right; color:#2EFE2E" class="media-body">{{ user_message }}<hr/></div></div></div></li>
+                                <li class="media"><div class="media-body"><div class="media"><div style="color:white" class="media-body">{{ bot_response }}<hr/></div></div></div></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="panel-footer">
+                        <form method="post" action="{{ url_for('app3.ask') }}">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter Message" name="messageText" id="messageText" autofocus />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info" type="submit">Send</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
